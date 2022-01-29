@@ -54,6 +54,7 @@ services:
     volumes:
       - "graylog_data:/usr/share/graylog/data/data"
       - "graylog_journal:/usr/share/graylog/data/journal"
+      - ${GEOLITE_DB_FILES_VOL}:/etc/graylog/server/geolite2
     restart: ${RESTART_POLICY}
 volumes:
   mongodb_data:
